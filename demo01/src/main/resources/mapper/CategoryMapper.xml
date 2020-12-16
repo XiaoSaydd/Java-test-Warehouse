@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+    <mapper namespace="org.cskj.demo01.Mapper.CategoryMapper">
+        <select id="queryAll" resultType="Category">
+            select * from category
+        </select>   
+         <select id="queryById" resultType="Category">
+            select * from category where id=#{id}
+        </select>  
+        <insert id="addAll" parameterType="category">
+        	insert into category(name) values(#{name})
+        </insert>
+        <update id="updateAll" parameterType="category">
+        	update category set name=#{name} where id=#{id}
+        </update>
+        <delete id="deleteAll" parameterType="int">
+        	delete  from category where id=#{id}
+        </delete>
+    </mapper>
