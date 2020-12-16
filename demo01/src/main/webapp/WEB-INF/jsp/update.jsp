@@ -29,14 +29,12 @@ var id = ${param.id};
 	<table>
 		<tr>
 			<td>姓名
-			
 			<input type="hidden" name="id" id="id">
 			<input type="text" name="name" id="name">
 			</td>
 		</tr>
 		<tr>
 			<td>
-				
 				<input type="submit" value="提交">
 			</td>
 		</tr>
